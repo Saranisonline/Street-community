@@ -114,6 +114,63 @@
             }
         }
 
+        /* Success Modal */
+        .success-modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Overlay background */
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .success-modal-content {
+            background-color: white;
+            margin: 20% auto;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .success-modal h3 {
+            font-size: 1.5rem;
+            color: #4caf50;
+        }
+
+        .success-modal p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .close-success {
+            padding: 0.8rem 1.2rem;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close-success:hover {
+            background-color: #45a049;
+        }
+
+        /* Slide-in Animation for Modal */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -122,6 +179,7 @@
             color: white;
             font-size: 1rem;
         }
+
     </style>
 </head>
 <body>
@@ -149,8 +207,47 @@
         </div>
     </section>
 
+    <!-- Success Modal -->
+    <div class="success-modal" id="successModal">
+        <div class="success-modal-content">
+            <h3>Success!</h3>
+            <p>Your message has been sent successfully. We'll get back to you soon.</p>
+            <button class="close-success" id="closeSuccessModal">Close</button>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2024 Street Community. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // Handle the form submission
+        const contactForm = document.getElementById('contact-form');
+        const successModal = document.getElementById('successModal');
+        const closeSuccessModal = document.getElementById('closeSuccessModal');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent form from submitting
+
+            // Show success modal
+            successModal.style.display = 'block';
+
+            // Optionally, clear the form
+            contactForm.reset();
+        });
+
+        // Close the success modal
+        closeSuccessModal.addEventListener('click', () => {
+            successModal.style.display = 'none';
+        });
+
+        // Close the modal if the user clicks outside of it
+        window.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.style.display = 'none';
+            }
+        });
+    </script>
+
 </body>
 </html>
