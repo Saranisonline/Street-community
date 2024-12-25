@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Street Community</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f0f8ff, #e6f7ff); /* Soft gradient background */
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #4caf50, #008cba);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 3rem 1rem;
+            background: #ffffff; /* Light background for form contrast */
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        #contact h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #4caf50;
+        }
+
+        #contact p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 1rem 0 2rem;
+            color: #333;
+        }
+
+        /* Form Styles */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        form label {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: block;
+            color: #4caf50;
+        }
+
+        form input,
+        form textarea,
+        form button {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        form button {
+            background-color: #4caf50;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        /* Animation for fading in content */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #333;
+            color: white;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <p>We are here to help! Reach out to us with your queries or feedback.</p>
+    </header>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>If you have any questions, suggestions, or concerns, feel free to fill out the form below. Our team will get back to you as soon as possible.</p>
+            <form id="contact-form" action="#" method="post">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Street Community. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
