@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Street Community</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f0f8ff, #e6f7ff); /* Soft gradient background */
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #4caf50, #008cba);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem; /* Increased padding for spaciousness */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* About Section */
+        #about {
+            padding: 3rem 1rem;
+            background: linear-gradient(to bottom, #f0f8ff, #e6f7ff); /* Same gradient background */
+            color: #333;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        #about h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #4caf50; /* Consistent green highlight */
+        }
+
+        #about p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 1rem 0;
+        }
+
+        .about-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .about-list li {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .about-list li:before {
+            content: "✔";
+            color: #4caf50;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Animation for fading in content */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #333;
+            color: white;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+        <p>Your trusted partner for settling into new homes with ease and confidence.</p>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>At <strong>Street Community</strong>, we are dedicated to helping individuals and families transition into new homes effortlessly. By connecting you with skilled professionals for household fixes and installations, we ensure your move to a new city is smooth and stress-free.</p>
+
+            <h2>Why Choose Us?</h2>
+            <ul class="about-list">
+                <li>Experienced and verified professionals for all your needs.</li>
+                <li>Convenient and reliable service, tailored to your schedule.</li>
+                <li>A user-friendly platform designed with simplicity in mind.</li>
+                <li>Affordable rates without compromising quality.</li>
+            </ul>
+
+            <h2>Our Story</h2>
+            <p>We started Street Community with the vision of making home transitions seamless for everyone. Whether you're moving to a new city or upgrading your current home, our platform bridges the gap between homeowners and trusted service providers. We believe in creating a community where settling in feels like home from day one.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Street Community. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
