@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street community - Customer Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Street community</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="worker.html" id="worker-dashboard-link">Worker Dashboard</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        
+        <div class="container">
+            <h1>Welcome to Street community</h1>
+            <p>Your one-stop solution for on-demand labor services.</p>
+            <button id="openModalBtn" class="btn">Submit a Service Request</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>
+                    At Street community, we help people settling into new homes by connecting them with skilled workers to fix and install household appliances. 
+                    Our platform is designed to make your transition to a new city as seamless as possible.
+                </p>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="electrical-repairs.jpg" alt="Electrical Repairs" class="service-image">
+                        <h3>Electrical Repairs</h3>
+                        <p>Need help with wiring, switches, or installations? We've got you covered.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="plumbing-services.jpg" alt="Plumbing Services" class="service-image">
+                        <h3>Plumbing Services</h3>
+                        <p>Fix leaks, install faucets, and more with our skilled plumbers.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="appliance-installation.jpg" alt="Appliance Installation" class="service-image">
+                        <h3>Appliance Installation</h3>
+                        <p>Get your appliances set up and ready to use in no time.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="furniture-assembly.jpg" alt="Furniture Assembly" class="service-image">
+                        <h3>Furniture Assembly</h3>
+                        <p>Hassle-free furniture assembly for your new home.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>How do I book a service?</h3>
+                    <p>Fill out the service request form with your details, and we’ll take care of the rest!</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I cancel a request?</h3>
+                    <p>Yes, you can cancel a request by contacting our support team.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="container">
+                <h2>What Our Users Say</h2>
+                <div class="testimonial">
+                    <p>"HomeFix made my move to a new city so much easier! Highly recommend."</p>
+                    <strong>- Sarah</strong>
+                </div>
+                <div class="testimonial">
+                    <p>"Quick, reliable, and professional services every time."</p>
+                    <strong>- John</strong>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal (Pop-up form) -->
+    <div id="requestModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Submit a Service Request</h2>
+            <form id="customer-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <label for="service">Choose Service:</label>
+                <select id="service" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="Electrical">Electrical Repairs</option>
+                    <option value="Plumbing">Plumbing Services</option>
+                    <option value="Appliance">Appliance Installation</option>
+                    <option value="Furniture">Furniture Assembly</option>
+                </select>
+
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" required>
+
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Street community. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
