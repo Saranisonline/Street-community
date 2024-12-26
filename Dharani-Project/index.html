@@ -14,7 +14,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="worker.html" id="worker-dashboard-link">Services</a></li>
+                <li><a href="worker.html" id="worker-dashboard-link">Worker Dashboard</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -32,17 +32,17 @@
 
     <main>
         <section id="about">
-    <div class="about-banner">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>
-                At Street community, we help people settling into new homes by connecting them with skilled workers to fix and install household appliances. 
-                Our platform is designed to make your transition to a new city as seamless as possible.
-            </p>
-        </div>
-    </div>
-</section>
-
+            <div class="about-banner">
+                <div class="container">
+                    <h2>About Us</h2>
+                    <p>
+                        At Street community, we help people settling into new homes by connecting them with skilled workers to fix and install household appliances. 
+                        Our platform is designed to make your transition to a new city as seamless as possible.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
 
         <section id="services">
             <div class="container">
@@ -91,41 +91,58 @@
                 <h2>What Our Users Say</h2>
                 <div class="testimonial">
                     <p>"HomeFix made my move to a new city so much easier! Highly recommend."</p>
-                    <strong>- Dharani</strong>
+                    <strong>- Sarah</strong>
                 </div>
                 <div class="testimonial">
                     <p>"Quick, reliable, and professional services every time."</p>
-                    <strong>- Sriram</strong>
+                    <strong>- John</strong>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Modal (Pop-up form) -->
-    <div id="requestModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Submit a Service Request</h2>
-            <form id="customer-form">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" placeholder="Enter your name" required>
+    
+   <!-- Modal (Pop-up form) -->
+<div id="requestModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Submit a Service Request</h2>
+        <form id="customer-form">
+            <!-- Name Field -->
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
 
-                <label for="service">Choose Service:</label>
-                <select id="service" required>
-                    <option value="" disabled selected>Select a service</option>
-                    <option value="Electrical">Electrical Repairs</option>
-                    <option value="Plumbing">Plumbing Services</option>
-                    <option value="Appliance">Appliance Installation</option>
-                    <option value="Furniture">Furniture Assembly</option>
-                </select>
+            <!-- Contact Details Field -->
+            <label for="contact">Your Contact Number:</label>
+            <input type="tel" id="contact" placeholder="Enter your phone number" required>
 
-                <label for="date">Preferred Date:</label>
-                <input type="date" id="date" required>
+            <!-- Email Field -->
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
 
-                <button type="submit">Submit Request</button>
-            </form>
-        </div>
+            <!-- Location Details Field -->
+            <label for="location">Your Address:</label>
+            <textarea id="location" placeholder="Enter your complete address" rows="3" required></textarea>
+
+            <!-- Service Field -->
+            <label for="service">Choose Service:</label>
+            <select id="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="Electrical">Electrical Repairs</option>
+                <option value="Plumbing">Plumbing Services</option>
+                <option value="Appliance">Appliance Installation</option>
+                <option value="Furniture">Furniture Assembly</option>
+            </select>
+
+            <!-- Preferred Date Field -->
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" required>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Request</button>
+        </form>
     </div>
+</div>
 
     <footer>
         <p>&copy; 2024 Street community. All rights reserved.</p>
