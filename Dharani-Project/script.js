@@ -3,13 +3,12 @@ const customerForm = document.getElementById("customer-form");
 const requestList = document.getElementById("request-list");
 const workerDashboardLink = document.getElementById("worker-dashboard-link");
 const modal = document.querySelector(".modal");
-const openModalBtn = document.getElementById("openModalBtn"); // Updated ID
+const openModalBtn = document.getElementById("openModalBtn");
 const closeModalBtn = document.querySelector(".close");
 
 // Load Requests from localStorage
 function loadRequests() {
-    const requests = JSON.parse(localStorage.getItem("serviceRequests")) || [];
-    return requests;
+    return JSON.parse(localStorage.getItem("serviceRequests")) || [];
 }
 
 // Save Requests to localStorage
@@ -44,18 +43,37 @@ if (modal) {
 if (customerForm) {
     customerForm.addEventListener("submit", (e) => {
         e.preventDefault();
+
+        // Collect form data
         const name = document.getElementById("name").value;
+        const contact = document.getElementById("contact").value;
+        const email = document.getElementById("email").value;
+        const location = document.getElementById("location").value;
         const service = document.getElementById("service").value;
         const date = document.getElementById("date").value;
 
-        const newRequest = { name, service, date, status: "Pending" };
+        // Create a new request object
+        const newRequest = {
+            name,
+            contact,
+            email,
+            location,
+            service,
+            date,
+            status: "Pending"
+        };
+
+        // Save request
         const requests = loadRequests();
         requests.push(newRequest);
         saveRequests(requests);
 
-        alert("Service request submitted!");
+        // Show success message
+        alert("Service request submitted successfully!");
+
+        // Reset form and close modal
         customerForm.reset();
-        modal.style.display = "none"; // Close modal on form submission
+        modal.style.display = "none";
     });
 }
 
@@ -70,6 +88,9 @@ if (requestList) {
             const listItem = document.createElement("li");
             listItem.innerHTML = `
                 <strong>Name:</strong> ${request.name} <br>
+                <strong>Contact:</strong> ${request.contact} <br>
+                <strong>Email:</strong> ${request.email} <br>
+                <strong>Location:</strong> ${request.location} <br>
                 <strong>Service:</strong> ${request.service} <br>
                 <strong>Date:</strong> ${request.date} <br>
                 <strong>Status:</strong> ${request.status} <br>
@@ -96,3 +117,4 @@ if (workerDashboardLink) {
         window.location.href = "worker.html";
     });
 }
+
