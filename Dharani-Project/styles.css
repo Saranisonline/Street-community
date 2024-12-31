@@ -236,7 +236,7 @@ footer {
 }
 
 .about-banner {
-    background: url('https://img.freepik.com/free-vector/character-illustration-home-improvement-concept_53876-43040.jpg?t=st=1735130948~exp=1735134548~hmac=b31622a28a1d72f226ff797055071510b5878cd99b1e3c8858610b62776dcfd3&w=996') no-repeat center center/cover; /* Add your banner image URL */
+    background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.housecallpro.com%2Fresources%2Fhome-service-business-ideas%2F&psig=AOvVaw36o6DVA0ySm2d8x2-qufCW&ust=1735701935309000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCIins9-H0YoDFQAAAAAdAAAAABAJ') no-repeat center center/cover; /* Add your banner image URL */
     position: relative;
     height: 400px; /* Adjust height based on the banner size */
     display: flex;
